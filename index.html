@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicken Jorge's</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍗</text></svg>">
+
+</head>
+<body>
+    <nav id="mobile-nav">🍔</nav>
+    <nav id="navbar">
+        <a href="#home" class="logo">🐓</a>
+        <ul class="links">
+            <li class="nav-item link"><a href="#home">Home</a></li>
+            <li class="nav-item link"><a href="#about">About</a></li>
+            <li class="nav-item link"><a href="#events">Offers</a></li>
+            <li class="nav-item link"><a href="#waitlist">Waitlist</a></li>
+        </ul>
+        <a href="https://demo.sevenrooms.com/reservations/chickenjorges"><button class="nav-item button">Book Now</button></a>
+        <p class="nav-close">&#x2715</p>
+    </nav>
+    <main class="main-content">
+        <div class="home section" id="home">
+            <h1 class="hero-text">All '90s, all night</h1>
+            <div id="sr-res-root" class="sr-lg sr-dark sr-#375569">Reservations</div>
+            
+            <script src="https://www.sevenrooms.com/widget/embed.js"></script>
+            <script>
+                SevenroomsWidget.init({
+                    venueId: "timfake",
+                    triggerId: "sr-res-root", // id of the dom element that will trigger this widget
+                    type: "reservations", // either 'reservations' or 'waitlist' or 'events'
+                    styleButton: true, // true if you are using the SevenRooms button
+                })
+            </script>
+
+            <div id="sr-res-root2" class="sr-lg sr-dark sr-#375569">Bookings</div>
+            <script>
+                SevenroomsWidget.init({
+                    venueId: "bennelong",
+                    triggerId: "sr-res-root2", // id of the dom element that will trigger this widget
+                    type: "reservations", // either 'reservations' or 'waitlist' or 'events'
+                    styleButton: true, // true if you are using the SevenRooms button
+                    allVenues: ['bennelong', 'quaysydney', 'gildas']
+                })
+            </script>         
+
+
+</script>
+        </div>
+        <div class="about section" id="about">
+            <h1 class="hero-text">Chicken who?</h1>
+            <p>
+ Chicken Jorge's! Our kitchen is full of chefs hailing from the world's best restaurants, making food you really want to eat.</p>
+            <p>Get comfy in our booths, chill out outside, or if you're feeling fancy, book out our private loft and play a round of pool.</p>
+            <p>We have live music on Fridays and Saturdays, movie nights every Tuesday, and heaps of other stuff going on.</p>
+            <a href="#events"><button class="button">Sounds good!</button></a>
+        </div>
+        <div class="events section" id="events">
+            <h1 class="hero-text">What's on at Chicken Jorge's</h1>
+            <a href="https://demo.sevenrooms.com/experiences/chickenjorges"><button class="button">Find Out</button></a>
+            <!-- <iframe src="https://demo.sevenrooms.com/experiences/chickenjorges" frameborder="0" width="100%" height="100%" style="background: #FFFFFF;" ></iframe> -->
+        </div>
+        <div class="waitlist section" id="waitlist">
+            <h1 class="hero-text">Line up at Chicken Jorge's</h1>
+            <a href="https://demo.sevenrooms.com/waitlist/chickenjorges"><button class="button">Join the queue</button></a>
+           
+        </div>
+    </main>
+</body>
+</html>

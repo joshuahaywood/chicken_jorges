@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --light-color: #f8edd2;
+  --dark-color: #3d3034;
+  --feature-color: #b3a780;
+  --theme-color: white;
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 0 2rem;
+  font-size: 1.1rem;
+  color: var(--theme-color);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.links {
+  position: absolute;
+  display: flex;
+  left: 50%;
+  transform: translate(-50%, 0);
+  list-style: none;
+  text-align: center;
+}
+
+.link a:hover {
+  border-bottom: 2px solid var(--theme-color);
+}
+
+.nav-item {
+  margin: 0 2rem;
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.button {
+  background: none;
+  padding: 0.8rem 2rem;
+  margin: 1rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: white;
+  border: 2px solid white;
+  transition: background-color 500ms cubic-bezier(0.075, 0.82, 0.165, 1),
+    border 500ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.nav-item.button {
+  color: var(--theme-color);
+  border: 2px solid var(--theme-color);
+}
+
+.nav-close {
+  display: none;
+}
+
+.section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.home {
+  background-image: linear-gradient(
+      0deg,
+      rgba(15, 8, 9, 0.4),
+      rgba(21, 12, 12, 0.875)
+    ),
+    url(/cr-hubert.jpeg);
+  background-size: cover;
+}
+
+.about {
+  background: var(--light-color);
+}
+
+.about .hero-text {
+  color: var(--dark-color);
+}
+
+.about .button {
+  border: 2px solid var(--dark-color);
+  color: var(--dark-color);
+}
+
+.events {
+  background-image: linear-gradient(
+      0deg,
+      rgba(15, 8, 9, 0.4),
+      rgba(21, 12, 12, 0.875)
+    ),
+    url(/inside-band.jpeg);
+  background-size: cover;
+}
+
+.waitlist {
+  background: black;
+}
+
+.waitlist .hero-text {
+  color: var(--light-color);
+}
+
+.waitlist .button {
+  border: 2px solid var(--light-color);
+  color: var(--light-color);
+}
+
+.hero-text {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 4.5rem;
+  text-align: center;
+  color: white;
+}
+
+.text-link {
+  text-decoration: underline;
+}
+
+p {
+  text-align: center;
+  font-size: 1.5rem;
+  width: min(60ch, 80%);
+  margin: 1rem;
+}
+
+img.background {
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.button:hover {
+  background: var(--feature-color);
+  border: 2px solid var(--feature-color);
+  color: white;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+@media only screen and (max-width: 770px) {
+  #mobile-nav {
+    display: block;
+    position: fixed;
+    width: 100%;
+    text-align: left;
+    font-size: 2.5rem;
+    padding: 1rem 2rem;
+  }
+
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    padding: 10%;
+    transform: translateY(-100%);
+  }
+
+  #navbar.active {
+    transform: translateY(0);
+    overflow: hidden;
+  }
+
+  #navbar.activated {
+    transition: transform 0.5s;
+  }
+
+  .nav-close {
+    display: block;
+  }
+
+  #navbar * {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .links {
+    flex-direction: column;
+    position: relative;
+    left: 0;
+    transform: none;
+  }
+
+  .nav-item.link {
+    margin: 1rem 0;
+  }
+}
