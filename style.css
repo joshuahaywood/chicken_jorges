@@ -95,7 +95,7 @@ a {
       rgba(15, 8, 9, 0.4),
       rgba(21, 12, 12, 0.875)
     ),
-    url(/cr-hubert.jpeg);
+    url(images/cr-hubert.jpeg);
   background-size: cover;
 }
 
@@ -118,7 +118,7 @@ a {
       rgba(15, 8, 9, 0.4),
       rgba(21, 12, 12, 0.875)
     ),
-    url(/inside-band.jpeg);
+    url(images/inside-band.jpeg);
   background-size: cover;
 }
 
