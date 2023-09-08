@@ -62,6 +62,7 @@ hamburger.addEventListener("click", (e) => {
 
 navClose.addEventListener("click", (e) => {
   navbar.classList.remove("active");
+  navbar.classList.remove("activated");
   document.body.style.overflow = "visible";
 });
 
