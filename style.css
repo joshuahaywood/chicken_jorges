@@ -38,6 +38,10 @@ a {
   color: inherit;
 }
 
+body {
+  display: flex;
+}
+
 .links {
   position: absolute;
   display: flex;
@@ -172,6 +176,34 @@ img.background {
   display: none;
 }
 
+.content {
+  width: 100%;
+  margin-right: 0;
+  transition: margin-right 0.5s;
+}
+
+#iframe-container {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  right: 0;
+  width: 450px;
+  background-color: white;
+  transition: translate 0.5s;
+}
+
+#iframe-container.hidden {
+  translate: 100%;
+}
+
+.iframe-close {
+  color: white;
+  position: absolute;
+  width: fit-content;
+  left: 3px;
+  top: -7px;
+}
+
 @media only screen and (max-width: 770px) {
   #mobile-nav {
     display: block;
@@ -218,5 +250,13 @@ img.background {
 
   .nav-item.link {
     margin: 1rem 0;
+  }
+
+  #iframe-container {
+    width: 100vw;
+  }
+
+  iframe {
+    width: 100%;
   }
 }
