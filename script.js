@@ -62,7 +62,6 @@ hamburger.addEventListener("click", (e) => {
 
 navClose.addEventListener("click", (e) => {
   navbar.classList.remove("active");
-  navbar.classList.remove("activated");
   document.body.style.overflow = "visible";
 });
 
@@ -82,4 +81,31 @@ iframeTrigger.addEventListener("click", (e) => {
 iframeClose.addEventListener("click", (e) => {
   iframeContainer.classList.add("hidden");
   content.style.marginRight = "0";
+});
+
+// language switch
+const lang = document.querySelector(".lang");
+const widgetButton = document.getElementById("nav-widget-button");
+const newButton = document.createElement("div");
+
+lang.addEventListener("click", (e) => {
+  if (lang.innerText === "🇦🇺") {
+    lang.innerText = "🇪🇸";
+    newButton.innerHTML = `<a  target="_blank" href="https://demo.sevenrooms.com/reservations/chickenjorges?lang=es">
+        <button id="nav-widget-button" class="nav-item button">
+          Book Now
+        </button>
+      </a>`;
+    widgetButton.replaceWith(newButton);
+    console.log("Switching to Spanish");
+  } else {
+    lang.innerText = "🇦🇺";
+    newButton.innerHTML = `<a target="_blank" href="https://demo.sevenrooms.com/reservations/chickenjorges?lang=en">
+        <button id="nav-widget-button" class="nav-item button">
+          Book Now
+        </button>
+      </a>`;
+    widgetButton.replaceWith(newButton);
+    console.log("Switching to English");
+  }
 });

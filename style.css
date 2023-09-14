@@ -204,6 +204,13 @@ img.background {
   top: -7px;
 }
 
+.lang {
+  position: fixed;
+  font-size: 3em;
+  bottom: 1rem;
+  left: 1rem;
+}
+
 @media only screen and (max-width: 770px) {
   #mobile-nav {
     display: block;
