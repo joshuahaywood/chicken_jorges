@@ -51,7 +51,7 @@ body {
   text-align: center;
 }
 
-.link a:hover {
+.link:hover {
   border-bottom: 2px solid var(--theme-color);
 }
 
